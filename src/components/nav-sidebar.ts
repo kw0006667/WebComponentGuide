@@ -132,7 +132,7 @@ export class NavSidebar extends LitElement {
 
     .part-section { margin-bottom: 2px; }
 
-    /* Inline sections — only visible when right panel is hidden (≤ 1200px) */
+    /* Inline sections — only visible when the desktop right panel is hidden */
     .inline-sections {
       display: none;
       flex-direction: column;
@@ -141,7 +141,7 @@ export class NavSidebar extends LitElement {
       padding-left: 0.75rem;
       border-left: 2px solid var(--color-border-secondary);
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 1480px) {
       .inline-sections { display: flex; }
     }
 

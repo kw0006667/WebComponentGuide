@@ -36,8 +36,7 @@ export class SectionsPanel extends LitElement {
       color: var(--color-text-muted);
       border-radius: var(--radius-sm);
       text-decoration: none;
-      border-left: 2px solid transparent;
-      transition: color var(--transition), background var(--transition), border-color var(--transition);
+      transition: color var(--transition), background var(--transition);
     }
     a:hover {
       color: var(--color-text);
@@ -46,7 +45,6 @@ export class SectionsPanel extends LitElement {
     }
     a.active {
       color: var(--color-accent);
-      border-left-color: var(--color-accent);
       background: var(--color-accent-soft);
     }
   `

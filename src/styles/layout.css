@@ -73,6 +73,7 @@ app-shell {
   margin-right: var(--sections-panel-width);
   min-height: 100vh;
   padding-top: var(--topbar-height);
+  transition: margin-left 220ms ease, margin-right 220ms ease;
 }
 
 /* ── Left Sidebar ── */
@@ -95,6 +96,7 @@ app-shell {
   max-width: var(--content-max-width);
   margin: 0 auto;
   width: 100%;
+  transition: padding 220ms ease;
 }
 
 /* ── Right Sections Aside ── */
@@ -106,6 +108,13 @@ app-shell {
   height: calc(100vh - var(--topbar-height));
   overflow-y: auto;
   padding: 1.5rem 0.75rem;
+  opacity: 1;
+  transform: translateX(0);
+  visibility: visible;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    visibility 0s linear 0s;
 }
 
 /* ── Mobile Overlay ── */
@@ -297,10 +306,19 @@ app-shell {
    Responsive
    ============================================================ */
 
-/* Tablet: hide right panel */
-@media (max-width: 1200px) {
+/* Hide the right panel before the reading column starts to compress */
+@media (max-width: 1480px) {
   .layout { margin-right: 0; }
-  .sections-aside { display: none; }
+  .sections-aside {
+    opacity: 0;
+    transform: translateX(16px);
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease,
+      visibility 0s linear 220ms;
+  }
 }
 
 /* Mobile: hide sidebar, show hamburger + drawer */
@@ -321,6 +339,15 @@ app-shell {
   .home-stats { grid-template-columns: repeat(2, 1fr); }
 
   .toc-part-range { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layout,
+  .content,
+  .sections-aside,
+  .sidebar {
+    transition: none;
+  }
 }
 
 @media (max-width: 480px) {
