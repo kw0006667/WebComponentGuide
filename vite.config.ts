@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
 
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1]
+const githubPagesBase = repoName ? `/${repoName}/` : '/'
+
 export default defineConfig({
-  base: '/GuideForWebComponent/',
+  base: process.env.GITHUB_ACTIONS ? githubPagesBase : '/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
