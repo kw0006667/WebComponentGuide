@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(/Users/timchang/Documents/WebComponent/GuideForWebComponent/public/favicon.svg:*)",
+      "Bash(npx tsc:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(npx vite:*)",
+      "Bash(grep -n '\\\\${' /Users/timchang/Documents/WebComponent/GuideForWebComponent/src/data/chapters/ch08.ts)",
+      "Bash(grep -n '[^\\\\\\\\]\\\\${' /Users/timchang/Documents/WebComponent/GuideForWebComponent/src/data/chapters/ch08.ts)",
+      "Bash(npm run:*)",
+      "Bash(kill %1)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5175/GuideForWebComponent/)",
+      "Bash(curl -s http://localhost:5175/GuideForWebComponent/)",
+      "Bash(ls -la /Users/timchang/Documents/WebComponent/GuideForWebComponent/*.config.* /Users/timchang/Documents/WebComponent/GuideForWebComponent/vite* /Users/timchang/Documents/WebComponent/GuideForWebComponent/tsconfig.json)",
+      "Bash(grep -n \"css\\\\`\\\\|html\\\\`\" /Users/timchang/Documents/WebComponent/GuideForWebComponent/src/data/chapters/ch02.ts)",
+      "Bash(grep -rn \"css\\\\`\\\\|html\\\\`\" /Users/timchang/Documents/WebComponent/GuideForWebComponent/src/data/chapters/)",
+      "Bash(grep -rn 'css`\\\\|html`' /Users/timchang/Documents/WebComponent/GuideForWebComponent/src/data/chapters/)",
+      "Bash(node -e \"const Prism = require\\(''prismjs''\\); require\\(''prismjs/components/prism-typescript''\\); require\\(''prismjs/components/prism-css''\\); require\\(''prismjs/components/prism-markup''\\); console.log\\(''TS tokens:'', Object.keys\\(Prism.languages.typescript\\)\\); console.log\\(''has template-string:'', ''template-string'' in Prism.languages.typescript\\);\")",
+      "Bash(node --input-type=module:*)",
+      "Bash(node /tmp/test-lit-prism.cjs)",
+      "Bash(cp /tmp/test-lit-prism.cjs /Users/timchang/Documents/WebComponent/GuideForWebComponent/test-lit-prism.cjs)",
+      "Bash(node test-lit-prism.cjs)",
+      "Bash(grep -n \"style\\\\|css\\\\|html\\\\`\\\\|template\" /Users/timchang/Documents/WebComponent/GuideForWebComponent/src/data/chapters/ch02.ts)",
+      "Bash(grep -i \"tagged\\\\|template\\\\|css\\\\`\\\\|html\\\\`\\\\|static style\")"
+    ]
+  }
+}

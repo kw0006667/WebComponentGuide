@@ -1,0 +1,234 @@
+/* ============================================================
+   Design Tokens — Light & Dark
+   ============================================================ */
+
+:root {
+  /* --- Backgrounds --- */
+  --color-bg:           #f5f7f9;
+  --color-bg-sidebar:   #ebf0f4;
+  --color-bg-elevated:  #ffffff;
+  --color-bg-hover:     #e2e9ef;
+  --color-bg-code:      #eef3f8;
+  --color-panel:        #ebf0f4;
+  --color-surface:      #f0f4f8;
+  --color-code-surface: #eef3f8;
+
+  /* --- Text --- */
+  --color-text:           #1a2632;
+  --color-text-primary:   #1a2632;
+  --color-text-secondary: #556574;
+  --color-text-muted:     #8291a0;
+  --color-text-tertiary:  #8291a0;
+
+  /* --- Accent --- */
+  --color-accent:       #1e5fa6;
+  --color-accent-hover: #17497f;
+  --color-accent-light: #dbe8f6;
+  --color-accent-dark:  #103458;
+  --color-accent-soft:  rgba(30, 95, 166, 0.10);
+
+  /* --- Borders --- */
+  --color-border:           #d4dde6;
+  --color-border-primary:   #d4dde6;
+  --color-border-secondary: #e7edf3;
+  --color-border-light:     #e7edf3;
+  --color-border-strong:    #b6c4d2;
+  --color-border-tertiary:  #b6c4d2;
+
+  /* --- Shadows --- */
+  --color-shadow:        rgba(15, 31, 46, 0.08);
+  --color-shadow-strong: rgba(15, 31, 46, 0.16);
+  --shadow-sm:  0 1px 4px rgba(15, 31, 46, 0.08);
+  --shadow-md:  0 2px 12px rgba(15, 31, 46, 0.12);
+  --shadow-lg:  0 8px 28px rgba(15, 31, 46, 0.18);
+  --shadow-soft: 0 2px 16px rgba(15, 31, 46, 0.10);
+
+  /* --- Status Colors --- */
+  --color-success: #1a9e6e;
+  --color-warning: #d97706;
+  --color-danger:  #dc2626;
+
+  /* --- Part Color Palettes --- */
+  --part-1-bg: #E1F5EE; --part-1-text: #085041;
+  --part-2-bg: #E6F1FB; --part-2-text: #0C447C;
+  --part-3-bg: #EEEDFE; --part-3-text: #3C3489;
+  --part-4-bg: #FAEEDA; --part-4-text: #633806;
+  --part-5-bg: #FAECE7; --part-5-text: #712B13;
+  --part-6-bg: #FBEAF0; --part-6-text: #72243E;
+  --part-7-bg: #EAF3DE; --part-7-text: #27500A;
+
+  /* --- Tag / Badge Colors --- */
+  --tag-core-text:      #1e5fa6; --tag-core-bg:      #dbe8f6;
+  --tag-tip-text:       #287151; --tag-tip-bg:       #dcefe6;
+  --tag-lit-text:       #5b41b2; --tag-lit-bg:       #e8e1fa;
+  --tag-advanced-text:  #9a5a13; --tag-advanced-bg:  #f7e7d2;
+  --tag-project-text:   #9b4a1f; --tag-project-bg:   #f7e0d2;
+  --tag-interview-text: #a33755; --tag-interview-bg: #f5dce5;
+
+  /* --- Typography --- */
+  --font-sans:  'Noto Sans TC', system-ui, sans-serif;
+  --font-serif: 'Noto Serif TC', serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+  --font-ui:    'Noto Sans TC', system-ui, sans-serif;
+
+  /* --- Layout --- */
+  --sidebar-width:        280px;
+  --sections-panel-width: 220px;
+  --topbar-height:        52px;
+  --content-max-width:    980px;
+
+  /* --- Radii --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* --- Transitions --- */
+  --transition: 200ms ease;
+}
+
+/* ============================================================
+   Dark Theme
+   ============================================================ */
+
+html[data-theme='dark'] {
+  --color-bg:           #131b23;
+  --color-bg-sidebar:   #0f151c;
+  --color-bg-elevated:  #1b2631;
+  --color-bg-hover:     #243342;
+  --color-bg-code:      #0f1821;
+  --color-panel:        #1b2631;
+  --color-surface:      #1f2d3d;
+  --color-code-surface: #0f1821;
+
+  --color-text:           #ecf3f9;
+  --color-text-primary:   #ecf3f9;
+  --color-text-secondary: #c1ced9;
+  --color-text-muted:     #8fa2b4;
+  --color-text-tertiary:  #8fa2b4;
+
+  --color-accent:       #7bb5f0;
+  --color-accent-hover: #9bc8f5;
+  --color-accent-light: #1d3248;
+  --color-accent-dark:  #bfdcff;
+  --color-accent-soft:  rgba(123, 181, 240, 0.14);
+
+  --color-border:           #374757;
+  --color-border-primary:   #374757;
+  --color-border-secondary: #293745;
+  --color-border-light:     #293745;
+  --color-border-strong:    #516577;
+  --color-border-tertiary:  #516577;
+
+  --color-shadow:        rgba(0, 0, 0, 0.24);
+  --color-shadow-strong: rgba(0, 0, 0, 0.42);
+  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.25);
+  --shadow-md:  0 2px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg:  0 8px 28px rgba(0, 0, 0, 0.44);
+  --shadow-soft: 0 2px 16px rgba(0, 0, 0, 0.30);
+
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger:  #f87171;
+
+  --part-1-bg: #0f2920; --part-1-text: #7dd9b8;
+  --part-2-bg: #0d2240; --part-2-text: #7ab8f5;
+  --part-3-bg: #1c1a40; --part-3-text: #b8b0ff;
+  --part-4-bg: #2e1f0a; --part-4-text: #f0c285;
+  --part-5-bg: #2e1208; --part-5-text: #f0a080;
+  --part-6-bg: #2e0f1c; --part-6-text: #f0a0c0;
+  --part-7-bg: #182810; --part-7-text: #a0d870;
+
+  --tag-core-text:      #93c5f8; --tag-core-bg:      #1d3248;
+  --tag-tip-text:       #8fd4b4; --tag-tip-bg:       #1d352b;
+  --tag-lit-text:       #cbbcff; --tag-lit-bg:       #2b2346;
+  --tag-advanced-text:  #f5c97a; --tag-advanced-bg:  #2e200a;
+  --tag-project-text:   #f5aa80; --tag-project-bg:   #2e1a0a;
+  --tag-interview-text: #f5a0c0; --tag-interview-bg: #2e1020;
+}
+
+/* ============================================================
+   Global Base Styles
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+/* ============================================================
+   Prism Syntax Highlight Token Colors (cross Shadow DOM via CSS vars)
+   ============================================================ */
+:root {
+  --prism-comment:     #6e7e8e;
+  --prism-keyword:     #0055a8;
+  --prism-string:      #197045;
+  --prism-number:      #a03010;
+  --prism-boolean:     #a03010;
+  --prism-function:    #5400cc;
+  --prism-class-name:  #7f4e00;
+  --prism-operator:    #586069;
+  --prism-punctuation: #586069;
+  --prism-property:    #003d66;
+  --prism-regex:       #a03010;
+  --prism-builtin:     #0055a8;
+  --prism-tag:         #0055a8;
+  --prism-attr-name:   #5400cc;
+  --prism-attr-value:  #197045;
+  --prism-parameter:   #003d66;
+  --prism-type:        #7f4e00;
+}
+
+html[data-theme='dark'] {
+  --prism-comment:     #6a8a9e;
+  --prism-keyword:     #cc99cd;
+  --prism-string:      #7ec699;
+  --prism-number:      #f08d49;
+  --prism-boolean:     #f08d49;
+  --prism-function:    #6fb3d2;
+  --prism-class-name:  #f8c555;
+  --prism-operator:    #a0b4c8;
+  --prism-punctuation: #7a90a4;
+  --prism-property:    #93c5f8;
+  --prism-regex:       #f08d49;
+  --prism-builtin:     #cc99cd;
+  --prism-tag:         #f2777a;
+  --prism-attr-name:   #f2777a;
+  --prism-attr-value:  #7ec699;
+  --prism-parameter:   #93c5f8;
+  --prism-type:        #f8c555;
+}

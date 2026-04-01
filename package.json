@@ -1,0 +1,20 @@
+{
+  "name": "guide-for-web-component",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.6",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1"
+  },
+  "dependencies": {
+    "lit": "^3.3.2",
+    "prismjs": "^1.30.0"
+  }
+}

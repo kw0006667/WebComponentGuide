@@ -1,0 +1,346 @@
+/* ============================================================
+   Chapter Content Typography — applies to light-DOM chapter-viewer
+   ============================================================ */
+
+chapter-viewer {
+  display: block;
+}
+
+/* --- Chapter Header --- */
+.chapter-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
+.chapter-num {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.chapter-header h1 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--color-text);
+  margin: 0.25rem 0 0.75rem;
+  font-family: var(--font-serif);
+}
+
+.chapter-header > p {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  max-width: 72ch;
+  margin: 0 0 1rem;
+}
+
+.chapter-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+/* --- Tags --- */
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.tag-core      { background: var(--tag-core-bg);      color: var(--tag-core-text); }
+.tag-tip       { background: var(--tag-tip-bg);       color: var(--tag-tip-text); }
+.tag-lit       { background: var(--tag-lit-bg);       color: var(--tag-lit-text); }
+.tag-advanced  { background: var(--tag-advanced-bg);  color: var(--tag-advanced-text); }
+.tag-project   { background: var(--tag-project-bg);   color: var(--tag-project-text); }
+.tag-interview { background: var(--tag-interview-bg); color: var(--tag-interview-text); }
+
+/* --- Chapter Catalog --- */
+.chapter-catalog {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.chapter-catalog-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.chapter-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.catalog-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0.5rem 0.6rem;
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  transition: background var(--transition), color var(--transition);
+  text-decoration: none;
+}
+.catalog-item:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.catalog-item-num {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  min-width: 20px;
+  padding-top: 1px;
+}
+
+/* --- Headings --- */
+chapter-viewer h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 2.5rem 0 1rem;
+  padding-top: 0.25rem;
+  font-family: var(--font-serif);
+  scroll-margin-top: calc(var(--topbar-height) + 1.5rem);
+  border-bottom: none;
+}
+
+chapter-viewer h2::before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 2.5rem;
+  background: var(--color-accent);
+  margin-bottom: 0.6rem;
+  border-radius: 2px;
+}
+
+chapter-viewer h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 1.75rem 0 0.6rem;
+  scroll-margin-top: calc(var(--topbar-height) + 1.5rem);
+}
+
+chapter-viewer h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* --- Paragraphs & Lists --- */
+chapter-viewer p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem;
+  max-width: 75ch;
+}
+
+chapter-viewer ul,
+chapter-viewer ol {
+  margin: 0.5rem 0 1rem 1.25rem;
+  padding: 0;
+}
+
+chapter-viewer li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.3rem;
+}
+
+chapter-viewer li > code,
+chapter-viewer p > code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--color-bg-code);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: var(--radius-sm);
+  padding: 1px 5px;
+  color: var(--color-accent-dark);
+  word-break: break-word;
+}
+html[data-theme='dark'] chapter-viewer li > code,
+html[data-theme='dark'] chapter-viewer p > code {
+  color: var(--color-accent);
+}
+
+/* --- Blockquote --- */
+chapter-viewer blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: 1rem 0;
+  padding: 0.5rem 1.25rem;
+  background: var(--color-accent-soft);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* --- Tables --- */
+chapter-viewer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+chapter-viewer th {
+  background: var(--color-bg-code);
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.82rem;
+}
+
+chapter-viewer td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--color-border-secondary);
+  color: var(--color-text-secondary);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+chapter-viewer tr:last-child td { border-bottom: none; }
+chapter-viewer tr:hover td { background: var(--color-bg-hover); }
+
+/* --- Chapter Summary --- */
+.chapter-summary-note {
+  margin-top: 2.5rem;
+  padding: 1.1rem 1.4rem;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.chapter-summary-note strong {
+  color: var(--color-accent);
+}
+
+/* --- Chapter Footer (prev / next) --- */
+.chapter-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border-secondary);
+}
+
+.chapter-footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: border-color var(--transition), background var(--transition);
+}
+.footer-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  text-decoration: none;
+}
+
+.footer-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+}
+
+.footer-title {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.footer-link:last-child {
+  text-align: right;
+}
+
+/* --- Interview Q callout --- */
+chapter-viewer em {
+  font-style: normal;
+  color: var(--tag-interview-text);
+  background: var(--tag-interview-bg);
+  border-radius: 4px;
+  padding: 1px 4px;
+  font-size: 0.93em;
+}
+
+/* --- Meta card grid in chapter header --- */
+.chapter-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.meta-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-secondary);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.85rem;
+}
+
+.meta-card-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: 3px;
+}
+
+.meta-card-value {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .chapter-catalog-grid { grid-template-columns: 1fr; }
+  .chapter-footer-links { grid-template-columns: 1fr; }
+  .chapter-meta-grid { grid-template-columns: 1fr; }
+  chapter-viewer h2 { font-size: 1.25rem; }
+  .chapter-header h1 { font-size: 1.4rem; }
+}
