@@ -8,6 +8,11 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    // Keep backdrop-filter declarations intact for GitHub Pages production builds.
+    // Vite's default Lightning CSS minifier currently collapses the topbar rule
+    // down to only -webkit-backdrop-filter, which breaks the blur effect in
+    // browsers expecting the standard property.
+    cssMinify: false,
     rollupOptions: {
       input: 'index.html',
       output: {
