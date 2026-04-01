@@ -23,7 +23,18 @@
       "Bash(cp /tmp/test-lit-prism.cjs /Users/timchang/Documents/WebComponent/GuideForWebComponent/test-lit-prism.cjs)",
       "Bash(node test-lit-prism.cjs)",
       "Bash(grep -n \"style\\\\|css\\\\|html\\\\`\\\\|template\" /Users/timchang/Documents/WebComponent/GuideForWebComponent/src/data/chapters/ch02.ts)",
-      "Bash(grep -i \"tagged\\\\|template\\\\|css\\\\`\\\\|html\\\\`\\\\|static style\")"
+      "Bash(grep -i \"tagged\\\\|template\\\\|css\\\\`\\\\|html\\\\`\\\\|static style\")",
+      "Bash(node /tmp/encode_html.js /tmp/vanilla_data_table.ts)",
+      "Bash(node /tmp/encode_html.js /tmp/vanilla_toast_manager.ts)",
+      "Bash(node /tmp/encode_html.js /tmp/vanilla_multi_step_form.ts)",
+      "Bash(node /tmp/encode_html.js /tmp/vanilla_dashboard_shell.ts)",
+      "Bash(wc -l /tmp/enc_*.txt)",
+      "Read(//usr/local/bin/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\(''''engines'''',{}\\)\\)\")",
+      "Bash(PATH=\"$PATH:/opt/homebrew/bin:/usr/local/bin\" npx tsc --noEmit --skipLibCheck src/data/chapters/ch31.ts)",
+      "Bash(node_modules/.bin/tsc --noEmit --skipLibCheck)",
+      "Bash(python3:*)"
     ]
   }
 }
